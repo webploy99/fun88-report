@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>fun88.report - Trang web chính thức</title>
+    <link rel="icon" href="./images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- splide -->
+    <!-- slide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <!--======== header ========-->
+    <section>
+        <!-- header scroll dropdown -->
+        <header id="navbar" class="bg-[#fefae0] header w-full fixed top-0 left-0 z-50 duration-500">
+            <div class="max-w-6xl m-auto px-2 py-1.5">
+                <div class="flex justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-2 text-blue-500" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border border-blue-500 p-0.5 rounded-md shadow-inner"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[180px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40 fixed top-0 left-0 w-0 md:w-auto h-full overflow-x-hidden md:relative md:h-auto duration-300">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <div class="md:hidden">
+                                <ul class="flex flex-col font-semibold text-[15px] tracing-wider text-gray-700 divide-y divide-slate-200 *:p-4 *:duration-300 *:cursor-pointer">
+                                    <li class="hover:bg-gray-500 hover:text-white"><a href="index.html">Trang chủ</a></li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Nhà cái Fun88</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Nhà cái</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Thể Thao</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Xổ Số</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Blog Game</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Hướng dẫn</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Thông tin FUN88</li>
+                                </ul>
+                            </div>
+                            <!-- sign in -->
+                            <div class="text-white *:w-28 flex gap-5 py-2 justify-center items-center hidden md:block text-[15px] *:py-1.5 *:rounded *:shadow *:border-2 *:border-gray-600 *:shadow *:duration-300">
+                                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- navigation screen -->
+            <div class="hidden md:block flex justify-center items-centerw-full py-3 bg-[#222]">
+                <ul class="flex flex-wrap justify-center *:px-4 *:border-x *:border-gray-500 *:bg-gray-600 font-[500] tracing-wider text-[16px] text-white *:py-1 *:duration-300 *:cursor-pointer *:border-2">
+                    <li class="hover:bg-gray-500 hover:-translate-y-1"><a href="index.html">Trang chủ</a></li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái Fun88</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái</li>
+                    <li onclick="url()"  onclick="url()"class="hover:bg-gray-500 hover:-translate-y-1">Xổ Số</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Blog Game</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Hướng dẫn</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thông tin FUN88</li>
+                </ul>
+            </div>
+            <!-- signup responsive -->
+            <div class="md:hidden text-white bg-gray-800 *:w-24 flex gap-2 py-1 justify-center items-center text-[15px] *:py-1 *:rounded *:shadow *:border-2 *:border-gray-500 *:shadow *:duration-300">
+                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+            </div>
+        </header>
+
+        <!-- header screen -->
+        <header class="bg-[#fefae0] z-40 shadow shadow-gray-600 w-full z-50">
+            <div class="max-w-6xl m-auto px-2 py-1.5">
+                <div class="flex justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-2 text-blue-500" onclick="OpenNav()">
+                        <ion-icon name="menu" class="border border-blue-500 p-0.5 rounded-md shadow-inner"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[180px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40 fixed top-0 left-0 w-0 md:w-auto h-full overflow-x-hidden md:relative md:h-auto duration-300">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <div class="md:hidden">
+                                <ul class="flex flex-col font-semibold text-[15px] tracing-wider text-gray-700 divide-y divide-slate-200 *:p-4 *:duration-300 *:cursor-pointer">
+                                    <li class="hover:bg-gray-500 hover:text-white"><a href="index.html">Trang chủ</a></li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Nhà cái Fun88</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Nhà cái</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Thể Thao</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Xổ Số</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Blog Game</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Hướng dẫn</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Thông tin FUN88</li>
+                                </ul>
+                            </div>
+                            <!-- sign in -->
+                            <div class="text-white *:w-28 flex gap-5 py-2 justify-center items-center hidden md:block text-[15px] *:py-1.5 *:rounded *:shadow *:border-2 *:border-gray-600 *:shadow *:duration-300">
+                                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- navigation screen -->
+            <div class="hidden md:block flex justify-center items-centerw-full py-3 bg-[#222]">
+                <ul class="flex flex-wrap justify-center *:px-4 *:border-x *:border-gray-500 *:bg-gray-600 font-[500] tracing-wider text-[16px] text-white *:py-1 *:duration-300 *:cursor-pointer *:border-2">
+                    <li class="hover:bg-gray-500 hover:-translate-y-1"><a href="index.html">Trang chủ</a></li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái Fun88</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thể Thao</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Xổ Số</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Blog Game</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Hướng dẫn</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thông tin FUN88</li>
+                </ul>
+            </div>
+            <!-- signup responsive -->
+            <div class="md:hidden text-white bg-gray-800 *:w-24 flex gap-2 py-1 justify-center items-center text-[15px] *:py-1 *:rounded *:shadow *:border-2 *:border-gray-500 *:shadow *:duration-300">
+                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+            </div>
+        </header>
+    </section>
+
+    <!-- main -->
+    <section>
+        <!-- main-items -->
+        <div class=" max-w-6xl m-auto p-5 shadow text-[16px] text-[#111] leading-7 sm:text-[19px] text-pretty">
+            <!-- slider -->
+             <div class="swiper mySwiper mt-5">
+                 <div class="flex">
+                    <div class="bg-gray-500 py-1 flex items-center gap-1 px-2">
+                        <ion-icon name="football-outline" class="text-blue-200 text-2xl"></ion-icon>
+                        <span class="sm:text-xl font-semibold text-blue-300">Nhà cái uy tín fun88</span>
+                    </div>
+                 </div>
+                
+                <div class="swiper-wrapper mt-3">
+                    <div class="swiper-slide">
+                        <img src="./images/slide1.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide2.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide3.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide4.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide5.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide6.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide7.jpg">
+                        <div class="autoplay-progress">
+                            <span class="progressBar"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- ticker -->
+            <div class="hidden sm:block">
+                <div class="news-ticker border text-sm rounded-full bg-gray-800 text-white tracking-wider">
+                    <div class="label relative whitespace-nowrap flex items-center justify-center px-5 bg-red-500 rounded-l-full">Fun88 Tin Hot</div>
+                    <ul class="headlines">
+                        <li class="active">Soi Kèo Thể Thao Cùng Nhà Cái Fun88 Nhận Thưởng Hấp Dẫn</li>
+                        <li>Kèo châu Á là gì? Thông tin giải thích đầy đủ và chi tiết</li>
+                        <li>Soi Kèo Slovenia Với Đan Mạch – Trực Tiếp 23h00 16/06/2024 Euro 2024</li>
+                        <li>Những Lưu Ý Khi Chơi Kèo Tỷ Số Tại Nhà Cái Thể Thao Fun88</li>
+                        <li>Các Loại Kèo Châu Âu Cần Lưu Ý Để Đạt Tỷ Lệ Thắng Cao Nhất</li>
+                        <li>Soi Kèo Áo Với Pháp – Nhận Định Trận Đấu, Dự Đoán Kết Quả</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- game at fun88 -->
+            <div class="border border-indigo-400 rounded-xl p-5"> 
+                <div class="py-2"><span class="text-xl text-blue-200 bg-gray-500 font-semibold px-3 py-1 rounded">Blog Game</span></div>
+                <div class="grid md:grid-cols-3 gap-8 mt-3">
+                    <div>
+                        <a href="./bloggame/banca.html" class="flex flex-col gap-3">
+                            <div class="overflow-hidden"><img src="./images/blog-game.webp" class="rounded-xl hover:scale-105 duration-500"></div>
+                            <div class="*:block *:mt-2 text-gray-700">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 3 ngày trước</p>
+                                <span class="text-xl font-[500]">Bắn Cá Online Đẳng Cấp – Tại FUN88 Mới Nhất 2024</span>
+                                <span class="text-xs">Bắn cá online là gì? Cách chơi</span>
+                            </div>
+                            <div class="mt-2"><a href="./bloggame/banca.html" class="px-4 py-2.5 bg-blue-500 text-gray-50 text-sm rounded-md hover:bg-blue-600 duration-300">Đọc thêm »</a></div>
+                        </a>
+                    </div>
+                    <!-- second -->
+                    <div class="flex flex-col gap-5 *:cursor-pointer">
+                        <a href="./bloggame/sidach.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img1.webp" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 3 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Xì Dách FUN88 Và Những Lưu Ý Xương Máu Cho Anh Em</span>
+                            </div>
+                        </a>
+
+                        <a href="./bloggame/baccarat.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img2.jpg" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 2 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Baccarat Fun88: Chiến Thắng Với Bí Quyết Chơi Hiệu Quả</span>
+                            </div>
+                        </a>
+
+                        <a href="./bloggame/blackjack.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img3.jpg" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 3 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Blackjack Fun88: Chiến Thắng Với Chiến Lược Tối Ưu</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- third -->
+                    <div class="flex flex-col gap-5 *:cursor-pointer">
+                        <a href="./bloggame/sicbo.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img4.jpg" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 6 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Sic Bo Online Tại Fun88: Xúc Xắc Và Cược May Mắn</span>
+                            </div>
+                        </a>
+
+                        <a href="./bloggame/roulette.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img5.webp" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 2 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Roulette Online Fun88: Đặt Cược Và Quay Số May Mắn</span>
+                            </div>
+                        </a>
+
+                        <a href="./bloggame/casino.html" class="flex gap-3">
+                            <div class="max-w-32 overflow-hidden"><img src="./images/blog-img6.jpg" class="rounded-xl hover:scale-105 duration-300"></div>
+                            <div class="*:block">
+                                <p class="text-xs"><ion-icon name="time-outline"></ion-icon> 3 ngày trước</p>
+                                <span class="text-sm font-[500] hover:text-blue-500">Tổng Hợp 5 Game Casino Fun88 Trả Thưởng Cao Nhất Tết Này</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- link vao -->
+            <div onclick="url()" class="flex items-center justify-center mt-5 py-5"><button class="bg-red-600 px-5 py-2.5 text-xl text-gray-50 rounded font-semibold">LINK VÀO FUN88 MỚI NHẤT 2024</button></div>
+
+            <!-- blog content -->
+            <div class="mt-5 w-full flex flex-col gap-4 text-pretty text-[16px] border border-indigo-400 rounded-xl p-5 shadow-inner">
+                <span class="text-2xl sm:tex-3xl md:text-4xl text-[#37477b] font-semibold block text-center w-full">Đôi nét về nhà cái Fun88 uy tín hàng đầu Châu Á</span>
+                <p>Nhà cái Fun88 là một trong những nhà cái cá cược thể thao trực tuyến uy tín nhất tại Châu Á. Với hơn 1 triệu thành viên trên toàn thế giới và con số này vẫn đang không ngừng tăng lên đã nhanh chóng trở thành một cái tên quen thuộc với những người đam mê cá cược trực tuyến. Được thành lập vào năm 2008 đã có hơn 10 năm kinh nghiệm trong lĩnh vực cá cược và được đánh giá là một trong những nhà cái uy tín và chất lượng nhất trên thị trường.</p>
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="./images/poster1.jpg">
+                        <i class="p-2 block text-center text-sm">Nhà cái FUn88</i>
+                    </div>
+                </div>
+
+                <p>Fun88 hiện đang được cấp phép hoạt động bởi Ủy ban Giám sát cờ bạc Isle of Man (IOM Gambling Supervision Commission) – một tổ chức quản lý cờ bạc uy tín trên thế giới. Điều này đảm bảo rằng Fun88 hoạt động hợp pháp và chịu sự giám sát chặt chẽ của chính phủ. Giao diện trang web của chúng tôi được thiết kế rất thân thiện và dễ sử dụng, ngay cả với những người mới chơi.</p>
+                <p>Các trò chơi cá cược tại đây cũng rất đa dạng và hấp dẫn, bao gồm các môn thể thao phổ biến như bóng đá, bóng rổ, quần vợt, bóng chuyền, khúc côn cầu trên sân băng, bóng đá Mỹ, bóng chày, boxing, tennis… Ngoài ra, Fun88 còn cung cấp các trò chơi casino trực tuyến hấp dẫn như baccarat, blackjack, roulette, slot, poker…</p>
+
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Nhà cái Fun88 – Đỉnh cao cá cược trực tuyến</span>
+                <p>Fun88 là một trong những nhà cái hàng đầu trong lĩnh vực cá cược trực tuyến tại Châu Á. Với nhiều năm kinh nghiệm hoạt động và được cấp phép bởi tổ chức uy tín, <b>Nhà cái Fun88</b> đã và đang thu hút được rất nhiều người chơi trên toàn thế giới. Vậy tại sao lại có nhiều người tin tưởng và lựa chọn chúng tôi để đặt cược? Hãy cùng tìm hiểu những lý do phổ biến nhất dưới đây.</p>
+                
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Uy tín và an toàn</span>
+                <p>Điều đầu tiên mà người chơi quan tâm khi lựa chọn một nhà cái là uy tín và an toàn. Với Fun88, bạn có thể hoàn toàn yên tâm về điều này. Nhà cái này đã được cấp phép hoạt động bởi Ủy ban Giám sát cờ bạc Isle of Man (IOM Gambling Supervision Commission) – một tổ chức quản lý cờ bạc uy tín trên thế giới. Điều này đảm bảo rằng Fun88 hoạt động hợp pháp và chịu sự giám sát chặt chẽ của chính phủ.</p>
+                <p>Ngoài ra, chúng tôi cũng sử dụng công nghệ mã hóa SSL 128-bit để bảo vệ thông tin cá nhân và tài khoản của người chơi. Điều này đảm bảo rằng thông tin của bạn sẽ không bị rò rỉ hay đánh cắp bởi bất kỳ ai.</p>
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Khuyến mãi lần đầu tại Fun88</span>
+                <p>Một trong những lý do khiến nhiều người chơi lựa chọn Fun88 là vì nhà cái này luôn có những chương trình khuyến mãi hấp dẫn cho người chơi mới. Khi đăng ký tài khoản tại nhà cái, bạn sẽ được nhận ngay một khoản tiền thưởng miễn phí để bắt đầu chơi. Ngoài ra, chúng tôi cũng có các chương trình khuyến mãi thường xuyên cho người chơi cũ, giúp họ có thêm cơ hội chiến thắng và nhận được nhiều phần thưởng hơn.</p>
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="./images/poster2.jpg">
+                        <i class="p-2 block text-center text-sm">Những lý do lựa chọn nhà cái Fun88</i>
+                    </div>
+                </div>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Fun88 có những trò chơi hấp dẫn nào?</span>
+                <p>Fun88 không chỉ là một nhà cái cá cược thể thao uy tín mà còn là một sòng bạc trực tuyến với rất nhiều trò chơi hấp dẫn. Dưới đây là một số trò chơi nổi bật tại nhà cái:</p>
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Cá cược thể thao</span>
+                <p>Với những người yêu thích thể thao, Fun88 là một lựa chọn hoàn hảo. Nhà cái này cung cấp đa dạng các môn thể thao phổ biến như bóng đá, bóng rổ, quần vợt, bóng chuyền, khúc côn cầu trên sân băng, bóng đá Mỹ, bóng chày, boxing, tennis… Bạn có thể đặt cược trực tiếp hoặc cược trước khi trận đấu diễn ra, tùy theo sở thích của mình.</p>
+                
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Casino trực tuyến</span>
+                <p>Nếu bạn là một người yêu thích các trò chơi casino. Nhà cái này cung cấp đa dạng các trò chơi như baccarat, blackjack, roulette, slot, poker… Bạn có thể chơi trực tiếp với các đại lý thật tại Fun88 và trải nghiệm như đang ở trong một sòng bạc thực sự.</p>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">E-sports</span>
+                <p>E-sports là một trong những xu hướng mới nhất trong lĩnh vực cá cược và Fun88 đã nhanh chóng bắt kịp xu hướng này. Tại Fun88, bạn có thể đặt cược vào các giải đấu game nổi tiếng như Liên Minh Huyền Thoại (League of Legends), Dota 2, CS:GO… và có cơ hội nhận được những phần thưởng hấp dẫn.</p>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Rút tiền và nạp tiền dễ dàng nhất với Fun88</span>
+                <p>Một trong những điểm mạnh của Fun88 là việc rút tiền và nạp tiền rất dễ dàng và thuận tiện. Bạn có thể sử dụng nhiều phương thức thanh toán khác nhau như chuyển khoản ngân hàng, thẻ tín dụng, ví điện tử… để nạp tiền vào tài khoản của mình. Thời gian xử lý rút tiền cũng rất nhanh chóng, chỉ trong vòng 24 giờ là bạn đã có thể nhận được số tiền rút ra.</p>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Nói về tin đồn Fun88 lừa đảo?</span>
+                <p>Như đã đề cập ở trên, Fun88 là một trong những nhà cái uy tín và an toàn nhất trên thị trường. Tuy nhiên, vẫn có nhiều tin đồn về việc nhà cái lừa đảo người chơi. Điều này hoàn toàn không đúng và chỉ là những thông tin sai lệch do những người không hiểu biết lan truyền. Vì vậy, hãy yên tâm khi lựa chọn Fun88 để đặt cược và tận hưởng những trải nghiệm thú vị.</p>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Fun88 có thể chơi trên điện thoại được không?</span>
+                <p>Với sự phát triển của công nghệ, việc chơi cá cược trực tuyến trên điện thoại di động đã trở nên phổ biến hơn bao giờ hết. Và FUN88 cũng không phải là ngoại lệ. Trang web của nhà cái được thiết kế theo dạng responsive, tức là có thể tương thích với các thiết bị di động. Bạn có thể truy cập vào website bằng điện thoại di động của mình thông qua trình duyệt web và trải nghiệm các trò chơi mà không cần phải tải ứng dụng riêng.</p>
+
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="./images/poster3.jpg">
+                        <i class="p-2 block text-center text-sm">Link tải Fun88 về điện thoại</i>
+                    </div>
+                </div>
+
+                <span class="text-xl text-[#37477b] font-semibold block w-full">Vào Fun88 khi bị chặn</span>
+                <p>Vì lý do pháp lý, có thể có những trường hợp bạn không thể truy cập vào website bằng đường link chính thức. Tuy nhiên, bạn hoàn toàn có thể vào nhà cái bằng cách sử dụng đường link thay thế được cung cấp bởi nhà cái hoặc thông qua các trang web proxy. Điều này giúp bạn tiếp tục truy cập và đặt cược tại Fun88 một cách dễ dàng.</p>
+                <p>Như vậy, chúng ta đã cùng tìm hiểu về nhà cái Fun88 – một trong những nhà cái cá cược thể thao trực tuyến uy tín hàng đầu tại Châu Á. Với những lý do và thông tin được đề cập ở trên, hy vọng bạn đã có thêm thông tin để lựa chọn chúng tôi làm địa chỉ đặt cược trực tuyến của mình.</p>
+                <p>Đừng quên đăng ký tài khoản Fun88 ngay hôm nay để nhận được những khuyến mãi hấp dẫn và trải nghiệm những trò chơi đa dạng tại nhà cái này. Chúc bạn thành công và may mắn!</p>
+            </div>  
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="bg-gray-800 text-gray-100 shadow">
+        <div class="max-w-[1170px] m-auto px-5 py-12">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 *:mt-8 sm:*:mt-0">
+                <!-- logo -->
+                <div class="">
+                    <a href="index.html" class="max-w-[250px]"><img src="./images/logo.png"></a>
+                    <p class="mt-5 text-[17px] text-balance"><a href="#" class="text-indigo-400 tracking-wide">Fun88</a> là nhà cái giải trí chuyên nghiệp và gây ấn tượng mạnh ngay từ những buổi đầu có mặt trên thị trường. Điển hình nhất là việc Fun88 cung cấp số lượng lớn game hấp dẫn, mức ăn thưởng cao. </p>
+                    
+                </div>
+                
+                <!-- VỀ CHÚNG TÔI -->
+                <div>
+                    <span class="text-lg">Phương thức thanh toán</span>
+                    <div class="mt-5 *:mt-4 grid grid-cols-2 gap-5">
+                        <div><img src="./images/1.png"></div>
+                        <div><img src="./images/2.png"></div>
+                        <div><img src="./images/3.png"></div>
+                        <div><img src="./images/4.png"></div>
+                        <div><img src="./images/5.png"></div>
+                        <div><img src="./images/6.png"></div>
+                        <div><img src="./images/7.png"></div>
+                        <div><img src="./images/8.png"></div>
+                    </div>
+                </div>
+    
+                <!-- TỪ KHOÁ TÌM KIẾM -->
+                <div>
+                    <span class="text-lg">Hướng dẫn nhà cái Fun88</span>
+                    <div class="mt-5 *:mt-4 *:block">
+                        <span>Điều khoản và điều kiện</span>   
+                        <span>Chơi có trách nhiệm</span>   
+                        <span>Liên hệ</span>   
+                        <span>Email: fun88report@gmail.com</span>
+                        <span>Website: fun88.report</span>
+                    </div>
+                    <div class="mt-5"><img src="./images/protect.png"></div>
+                </div>
+            </div>
+
+            <div class="mt-16 *:mt-10 w-full">
+                <div class="w-full"><img src="./images/doitac.webp" class="w-full"></div>
+            </div>
+        </div>
+        <div class="bg-gray-700 w-full *:block *:text-center py-4 text-gray-400 text-sm tracking-wider border-t border-gray-500">
+            <span>© Copyright 2024, All Rights Reserved  |   Design by Fun88</span>
+        </div>
+    </section>
+    
+    <!-- splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+

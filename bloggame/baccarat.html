@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>fun88.report - Trang web chính thức</title>
+    <link rel="icon" href="./images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- splide -->
+    <!-- slide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <!--======== header ========-->
+    <section>
+        <!-- header scroll dropdown -->
+        <header id="navbar" class="bg-[#fefae0] header w-full fixed top-0 left-0 z-50 duration-500">
+            <div class="max-w-6xl m-auto px-2 py-1.5">
+                <div class="flex justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-2 text-blue-500" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border border-blue-500 p-0.5 rounded-md shadow-inner"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[180px] cursor-pointer">
+                        <a href="../index.html"><img src="../images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40 fixed top-0 left-0 w-0 md:w-auto h-full overflow-x-hidden md:relative md:h-auto duration-300">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <div class="md:hidden">
+                                <ul class="flex flex-col font-semibold text-[15px] tracing-wider text-gray-700 divide-y divide-slate-200 *:p-4 *:duration-300 *:cursor-pointer">
+                                    <li class="hover:bg-gray-500 hover:text-white"><a href="../index.html">Trang chủ</a></li>
+                                    <li onclick="url" class="hover:bg-gray-500 hover:text-white">Nhà cái Fun88</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Nhà cái</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Thể Thao</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Xổ Số</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Blog Game</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Hướng dẫn</li>
+                                    <li onclick="url()" class="hover:bg-gray-500 hover:text-white">Thông tin FUN88</li>
+                                </ul>
+                            </div>
+                            <!-- sign in -->
+                            <div class="text-white *:w-28 flex gap-5 py-2 justify-center items-center hidden md:block text-[15px] *:py-1.5 *:rounded *:shadow *:border-2 *:border-gray-600 *:shadow *:duration-300">
+                                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- navigation screen -->
+            <div class="hidden md:block flex justify-center items-centerw-full py-3 bg-[#222]">
+                <ul class="flex flex-wrap justify-center *:px-4 *:border-x *:border-gray-500 *:bg-gray-600 font-[500] tracing-wider text-[16px] text-white *:py-1 *:duration-300 *:cursor-pointer *:border-2">
+                    <li class="hover:bg-gray-500 hover:-translate-y-1"><a href="../index.html">Trang chủ</a></li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái Fun88</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái</li>
+                    <li onclick="url()"  onclick="url()"class="hover:bg-gray-500 hover:-translate-y-1">Xổ Số</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Blog Game</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Hướng dẫn</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thông tin FUN88</li>
+                </ul>
+            </div>
+            <!-- signup responsive -->
+            <div class="md:hidden text-white bg-gray-800 *:w-24 flex gap-2 py-1 justify-center items-center text-[15px] *:py-1 *:rounded *:shadow *:border-2 *:border-gray-500 *:shadow *:duration-300">
+                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+            </div>
+        </header>
+
+        <!-- header screen -->
+        <header class="bg-[#fefae0] z-40 shadow shadow-gray-600 w-full z-50">
+            <div class="max-w-6xl m-auto px-2 py-1.5">
+                <div class="flex justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-2 text-blue-500" onclick="OpenNav()">
+                        <ion-icon name="menu" class="border border-blue-500 p-0.5 rounded-md shadow-inner"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[180px] cursor-pointer">
+                        <a href="../index.html"><img src="../images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40 fixed top-0 left-0 w-0 md:w-auto h-full overflow-x-hidden md:relative md:h-auto duration-300">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <div class="md:hidden">
+                                <ul class="flex flex-col font-semibold text-[15px] tracing-wider text-gray-700 divide-y divide-slate-200 *:p-4 *:duration-300 *:cursor-pointer">
+                                    <li class="hover:bg-gray-500 hover:text-white"><a href="../index.html">Trang chủ</a></li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Nhà cái Fun88</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Nhà cái</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Thể Thao</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Xổ Số</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Blog Game</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Hướng dẫn</li>
+                                    <li class="hover:bg-gray-500 hover:text-white">Thông tin FUN88</li>
+                                </ul>
+                            </div>
+                            <!-- sign in -->
+                            <div class="text-white *:w-28 flex gap-5 py-2 justify-center items-center hidden md:block text-[15px] *:py-1.5 *:rounded *:shadow *:border-2 *:border-gray-600 *:shadow *:duration-300">
+                                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- navigation screen -->
+            <div class="hidden md:block flex justify-center items-centerw-full py-3 bg-[#222]">
+                <ul class="flex flex-wrap justify-center *:px-4 *:border-x *:border-gray-500 *:bg-gray-600 font-[500] tracing-wider text-[16px] text-white *:py-1 *:duration-300 *:cursor-pointer *:border-2">
+                    <li class="hover:bg-gray-500 hover:-translate-y-1"><a href="../index.html">Trang chủ</a></li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái Fun88</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Nhà cái</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thể Thao</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Xổ Số</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Blog Game</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Hướng dẫn</li>
+                    <li onclick="url()" class="hover:bg-gray-500 hover:-translate-y-1">Thông tin FUN88</li>
+                </ul>
+            </div>
+            <!-- signup responsive -->
+            <div class="md:hidden text-white bg-gray-800 *:w-24 flex gap-2 py-1 justify-center items-center text-[15px] *:py-1 *:rounded *:shadow *:border-2 *:border-gray-500 *:shadow *:duration-300">
+                <button onclick="url()" class="bg-[#505ac7] hover:bg-white hover:text-[#505ac7]">Đăng Ký</button>
+                <button onclick="url()" class="bg-[#d33] hover:bg-white hover:text-yellow-600">Đặng Nhập</button>
+            </div>
+        </header>
+    </section>
+
+    <!-- main -->
+    <section>
+        <!-- main-items -->
+        <div class=" max-w-6xl m-auto p-5 shadow text-[16px] text-[#111] leading-7 sm:text-[19px] text-pretty">
+            
+            <!-- blog content -->
+            <div class="mt-3 w-full flex flex-col gap-4 text-pretty text-[16px]">
+                <div class="text-sm">
+                    <span><a href="../index.html" class="text-blue-400"><ion-icon name="home-outline" class="text-yellow-600"></ion-icon> Trang chủ</a> / <a href="baccarat.html" class="text-blue-400">Baccarat</a> / Baccarat Fun88: Chiến Thắng Với Bí Quyết Chơi Hiệu Quả</span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="../images/baccarat1.jpg" class="w-full">
+                        <i class="p-2 block text-center text-sm">Baccarat Fun88 Và Những Lưu Ý Xương Máu Cho Anh Em</i>
+                    </div>
+                </div>
+                <span class="text-2xl sm:tex-3xl md:text-4xl mt-3 text-[#37477b] font-semibold block text-center w-full">Baccarat Fun88: Chiến Thắng Với Bí Quyết Chơi Hiệu Quả</span>
+
+                <p><a href="#" class="text-blue-400">Baccarat Fun88</a> được chú trọng phát triển với nhiều ưu điểm đẳng cấp. Mọi người sẽ cảm thấy sảng khoái, vui vẻ khi khám phá trò chơi cá cược đỉnh cao này. Để có thể hiểu hơn về tựa game thì anh em hãy cùng tiến vào bài viết bên dưới đây. </p>
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Tổng quan về Baccarat Fun88</span>
+                <p>Đến với nhà cái <a href="#" class="text-blue-400">Fun88</a>, anh em sẽ được trải nghiệm rất nhiều tựa game huyền thoại, đình đám trên thế giới. Chúng ta có thể kể đến những trò chơi như Blackjack, Poker, Dragon Tiger,… Trong số đó, Baccarat thu hút được nhiều anh em hơn cả vì tính hấp dẫn cùng nhiều phiên bản khác nhau. </p>
+
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="../images/baccarat2.jpg">
+                        <i class="p-2 block text-center text-sm">Mọi người tìm hiểu giới thiệu về trò chơi Baccarat</i>
+                    </div>
+                </div>
+
+                <p>Trò chơi được nhà cái chú trọng xây dựng vô cùng nổi bật. <b>Baccarat Fun88</b> mang nhiều thế mạnh:</p>
+                <div class="list-disc leading-8">
+                    <li>Giao diện được thiết kế sang trọng và chân thực nhất.</li>
+                    <li>Hình thức live trực tiếp giúp anh em có thể nắm bắt được diễn biến trò chơi, đảm bảo sự công bằng. </li>
+                    <li>Trò chơi sẽ được điều khiển bởi các Dealer xinh đẹp, nóng bỏng nên mọi người khó mà có thể rời mắt khỏi ván game.</li>
+                    <li>Đa dạng phiên bản đề hội viên lựa chọn tham gia: cổ điển, mini,…</li>
+                    <li>Các cấp độ cược khác nhau được thiết kế để có thể phù hợp với nhu cầu cùng sở thích của khách hàng.</li>
+                    <li>Dịch vụ thanh toán nhanh chóng, tốc độ mà vẫn đảm bảo được sự an toàn thông tin cá nhân.</li>
+                    <li>Chăm sóc khách hàng được tập trung đào tạo chuyên nghiệp. Chính vì vậy có thể đảm bảo mọi vấn đề của anh em được giải quyết một cách thỏa đáng…</li>
+                </div>
+
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Luật chơi Baccarat đơn giản dành cho người mới</span>
+                <p>Để có thể làm chủ được bộ môn <b>Baccarat tại</b><a href="#" class="text-blue-400">nhà cái Fun88</a> thì trước hết anh em phải nắm bắt được quy tắc chơi. Hãy cùng chuyên mục bên dưới đây tìm hiểu thêm về luật mà nền tảng đưa ra nhé:</p>
+
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Bộ bài và cách tính điểm</span>
+                <p>Nhà cái sẽ sử dụng từ 4 đến 8 bộ bài Tây 52 lá tiêu chuẩn. Để xác định được người thắng thua thì sẽ dựa trên quy tắc tính điểm. Vì vậy các quân bài sẽ được quy ước giá trị như sau:</p>
+                <div class="list-disc leading-8">
+                    <li>Lá A: Được hiểu là 1 điểm.</li>
+                    <li>Các cây từ 2 đến 9 có giá trị tương đương với số được đánh trên đó.</li>
+                    <li>Những lá bài đầu người như J, Q, K và 10 sẽ được tính là 0 điểm.</li>
+                </div>
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Các cửa cược</span>
+                <p>Trò chơi <b>Baccarat Fun88</b> sẽ bao gồm 3 cửa cược chính. Mọi người phải hiểu được ý nghĩa của chúng để khám phá bộ môn một cách tự tin:</p>
+                <div class="list-disc leading-8">
+                    <li>Banker (<a href="#" class="text-blue-400">Nhà cái</a>): Bet thủ đặt cược dự đoán tổng số bài của Banker sẽ lớn hơn Player. Cửa này ứng với tỷ lệ trả thưởng 0.95:1.</li>
+                    <li>Player (Người chơi): Cửa cược này được sử dụng để chỉ Player sẽ có lợi thế chiến thắng hơn. Mọi người được nhận thưởng với tỷ lệ 1 ăn 1.</li>
+                    <li>Tie (Hòa): Đây là tình huống hòa giữa Banker và Player. Cửa này có tỷ lệ thưởng cao nhất với tỷ lệ 1 ăn 8.</li>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="../images/baccarat3.jpg">
+                        <i class="p-2 block text-center text-sm">Bet thủ cần ghi nhớ luật chơi Baccarat Fun88</i>
+                    </div>
+                </div>
+
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Diễn biến ván chơi</span>
+                <p>Khi bắt đầu vào ván cược, anh em sẽ phải đặt tiền dự đoán xem cửa nào sẽ dành chiến thắng. Nhà cái sẽ cho bet thủ một thời gian nhất định để thực hiện hành động này.</p>
+                <p>Dealer của nhà cái sẽ tiến hành trộn và chia cho Player và Banker mỗi bên 2 lá. Các cửa sẽ có quyền rút thêm quân bài thứ 3 dựa vào từng tình huống. Bên nào có tổng điểm gần 9 nhất thì sẽ giành được chiến thắng.</p>
+                <p>Lúc này, người chơi nào dự đoán đúng cửa thì sẽ giành được món quà với tỷ lệ thưởng tương ứng. Website sẽ cộng thẳng tiền vào account game cho bet thủ. Tuy nhiên nếu ai đưa ra nhận định sai thì sẽ bị mất đi vốn đặt ở đầu ván bài.</p>
+                
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Anh em học hỏi bí quyết chơi Baccarat tại Fun88 thắng lớn</span>
+                <p>Bộ môn <a href="#" class="text-blue-400">Baccarat</a> đòi hỏi game thủ phải có tư duy, khả năng logic cùng nhiều chiến thuật hay ho. Nắm bắt được nhu cầu học hỏi của mọi người, chuyên mục sẽ đưa ra những bí quyết từ chuyên gia:</p>
+
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Hạn chế đặt cược cửa hòa</span>
+                <p>Cửa hòa là nơi có tỷ lệ thưởng cao nhất – 1 ăn 8. Chính vì vậy mà nhiều bet thủ lựa chọn đặt cược để nhận về món quà giá trị của nền tảng.</p>
+                <p>Tuy nhiên tỷ lệ thưởng cao cũng đồng nghĩa với rủi ro lớn. Mọi người khi chơi nên hạn chế đặt cược cho cửa Tie. Như vậy bet thủ sẽ tiết kiệm được kha khá số tiền vốn và đưa ra được quyết định hợp lý hơn.</p>
+                
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Nên bắt đầu với số vốn nhỏ</span>
+                <p>Nếu như anh em mới tham gia vào <b>Baccarat Fun88</b> thì chỉ nên đặt cược với số vốn nhỏ lẻ mà thôi. Bằng cách này, hội viên sẽ có cơ hội thực chiến nhiều ván, tăng khả năng giành chiến thắng.</p>
+
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-100">
+                        <img src="../images/baccarat4.jpg">
+                        <i class="p-2 block text-center text-sm">Kinh nghiệm chắc thắng bài xì dách từ dân cược chuyên nghiệp</i>
+                    </div>
+                </div>
+                
+                <span class="text-2xl md:text-3xl text-[#37477b] font-semibold block w-full">Nghe theo lời khuyên của chuyên gia</span>
+                <p>Việc lắng nghe theo lời khuyên đặt cược của các chuyên gia cũng sẽ giúp bet thủ chiến thắng với Baccarat. Bởi những người này sở hữu nhiều kinh nghiệm, có thể đưa ra được dự đoán có độ chính xác cao.</p>
+                <p><b>Baccarat Fun88</b> đã được bài viết bên trên giới thiệu tổng quan cho bet thủ tham khảo. Trò chơi với những quy tắc đơn giản nên ai cũng có thể làm quen và khám phá, Tuy nhiên anh em phải học hỏi thật nhiều bí quyết để nâng cao cơ hội thắng của mình.</p>
+            </div>  
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="bg-gray-800 text-gray-100 shadow">
+        <div class="max-w-[1170px] m-auto px-5 py-12">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 *:mt-8 sm:*:mt-0">
+                <!-- logo -->
+                <div class="">
+                    <a href="../index.html" class="max-w-[250px]"><img src="../images/logo.png"></a>
+                    <p class="mt-5 text-[17px] text-balance"><a href="#" class="text-indigo-400 tracking-wide">Fun88</a> là nhà cái giải trí chuyên nghiệp và gây ấn tượng mạnh ngay từ những buổi đầu có mặt trên thị trường. Điển hình nhất là việc Fun88 cung cấp số lượng lớn game hấp dẫn, mức ăn thưởng cao. </p>
+                    
+                </div>
+                
+                <!-- VỀ CHÚNG TÔI -->
+                <div>
+                    <span class="text-lg">Phương thức thanh toán</span>
+                    <div class="mt-5 *:mt-4 grid grid-cols-2 gap-5">
+                        <div><img src="../images/1.png"></div>
+                        <div><img src="../images/2.png"></div>
+                        <div><img src="../images/3.png"></div>
+                        <div><img src="../images/4.png"></div>
+                        <div><img src="../images/5.png"></div>
+                        <div><img src="../images/6.png"></div>
+                        <div><img src="../images/7.png"></div>
+                        <div><img src="../images/8.png"></div>
+                    </div>
+                </div>
+    
+                <!-- TỪ KHOÁ TÌM KIẾM -->
+                <div>
+                    <span class="text-lg">Hướng dẫn nhà cái Fun88</span>
+                    <div class="mt-5 *:mt-4 *:block">
+                        <span>Điều khoản và điều kiện</span>   
+                        <span>Chơi có trách nhiệm</span>   
+                        <span>Liên hệ</span>   
+                    </div>
+                    <div class="mt-5"><img src="../images/protect.png"></div>
+                </div>
+            </div>
+
+            <div class="mt-16 *:mt-10 w-full">
+                <div class="w-full"><img src="../images/doitac.webp" class="w-full"></div>
+            </div>
+        </div>
+        <div class="bg-gray-700 w-full *:block *:text-center py-4 text-gray-400 text-sm tracking-wider border-t border-gray-500">
+            <span>© Copyright 2024, All Rights Reserved  |   Design by Fun88</span>
+        </div>
+    </section>
+    
+    <!-- splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./bloggame.js"></script>
+</body>
+</html>
+
+
+
